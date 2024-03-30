@@ -7,14 +7,48 @@
 </head>
 <body>
 
-    <h1>Student Grade Calculator</h1>
-    <label for="marksInput">Enter student marks:</label>
-    <input type="number" id="marksInput" placeholder="Enter marks">
-    <button onclick="calculateGrade()">Calculate Grade</button>
-    <p id="gradeOutput"></p>
+    <div class="container"> 
+
+        <div class="program">
+            <h2>Student Grade Calculator</h2>
+            <div class="form-group">
+                <label for="marksInput">Enter student marks:</label>
+                <input type="number" id="marksInput" placeholder="Enter marks">
+            </div>
+            <button onclick="calculateGrade()">Calculate Grade</button>
+            <p id="gradeOutput"></p>
+        </div>
+
+
+        <div class="program">
+            <h2>speeding ticket system</h2>
+            <div class="form-group">
+                <label for="speedInput">Enter speed (km/h):</label>
+                <input type="number" id="speedInput" placeholder="Enter speed">
+            </div>
+            <button onclick="calculateDemeritPoints()">Calculate Demirit Points</button>
+            <p id="pointOutput"></p>
+        </div>
+
+
+        <div class="program">
+            <h2>Salary calculation program</h2>
+            <div class="form-group">
+                <label for="basicSalaryInput">Enter basic salary:</label>
+                <input type="number" id="basicSalaryInput" placeholder="Enter basic salary">
+            </div>
+            <div class="form-group">
+                <label for="benefitsInput">Enter benefits:</label>
+                <input type="number" id="benefitsInput" placeholder="Enter benefits">
+                
+            </div>
+            <button onclick="calculateNetSalary()">Calculate net salary</button>
+            <p id="netSalaryOutput"></p>
+        </div>
+    </div>
   <script src="marks.js"> </script>
 
-  
+
   <script src="speed.js"> </script>
   <script src="salary.js"> </script>
 

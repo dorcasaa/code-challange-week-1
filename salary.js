@@ -1,3 +1,21 @@
+function calculateNetSalary() {
+    const basicSalaryInput = document.getElementById("basicSalaryInput");
+    const benefitsInput = document.getElementById("benefitsInput")
+
+    const netSalaryOutput = document.getElementById("netSalaryOutput");
+        
+    const basicSalary = parseFloat(basicSalaryInput.value);
+    const benefits = parseFloat(benefitsInput.value);
+        
+    const payee = calculatePayee(basicSalary);
+    const nhif = calculateNHIFDeductions(basicSalary);
+    const nssf = calculateNSSFContributions(basicSalary);
+    const grossSalary = basicSalary + benefits;
+    const deductions = payee + nhif + nssf;
+    const netSalary = grossSalary - deductions;
+        
+    netSalaryOutput.textContent = "Net Salary: " + netSalary;
+        }
 // Function to calculate PAYE tax
 function calculatePayee(basicSalary) {
     if (basicSalary <= 12298) {
@@ -46,7 +64,7 @@ function calculateNHIFDeductions(basicSalary) {
     } else if (basicSalary <= 79999) {
         return 1400;
     } else if (basicSalary <= 89999) {
-        return 1500;
+     return 1500;
     } else if (basicSalary <= 99999) {
         return 1600;
     } else {
